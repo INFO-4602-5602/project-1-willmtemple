@@ -1,17 +1,30 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Project 0</title>
-<style type="text/css" href="project0.css"></style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!--Put your D3 import statement between these two lines-->
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-<!--Put your D3 import statement between these two lines-->
+    <title>Project 1 - William Temple</title>
+    <meta charset="utf-8" />
+    <link   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"
+            integrity="sha256-hYXbQJK4qdJiAeDVjjQ9G0D6A0xLnDQ4eJI9dkm7Fpk="
+            crossorigin="anonymous"></script>
+    <link   href="project1.css"
+            rel="stylesheet" />
 </head>
 
 <body>
+<div class="container">
 	<div id="partOne">
         <h1>Part One: </h1>
-        I've made a change!
 	</div>
     
     <div id="partTwo">
@@ -35,7 +48,13 @@
     
     <script type="text/javascript">
         // Put your part one code here ***********************
-
+        var romans = ["I", "II", "III", "IV"]
+        for (var n in romans) {
+            d3.csv("data/anscombe_" + romans[n] + ".csv", function(error, data) {
+                if (error) throw error;
+                checkDataset(data);
+            });
+        }
         
         // Leave this to test your data uploading. All data uploading should be above this line
         function checkDataset(dataset) {
@@ -52,7 +71,6 @@
         // Put your part five code here ***********************
         
     </script>
+</div>
 </body>
-
-
 </html>

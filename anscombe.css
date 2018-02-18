@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+div.container.main {
+    height: 100%;
+}
+
+div .qcon {
+    height: 300px;
+    /* If you change these, also change margins in anscombe.js */
+    padding: 20 20 20 20;
+}
